@@ -11,8 +11,9 @@ Creates the following resources:
 ## Usage
 
 ```hcl
-module "aws_health_notifications" {
-  source = "../../modules/aws-aws-health-notifications"
+module "health-notifications" {
+  source  = "trussworks/health-notifications/aws"
+  version = "1.0.0"
 
   environment           = "prod"
   s3_bucket             = "lambda-builds-us-west-2"
