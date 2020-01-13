@@ -1,7 +1,7 @@
 variable "cloudwatch_logs_retention_days" {
   default     = 90
   description = "Number of days to keep logs in AWS CloudWatch."
-  type        = "string"
+  type        = string
 }
 
 variable "environment" {
@@ -10,20 +10,21 @@ variable "environment" {
 
 variable "s3_bucket" {
   description = "The name of the S3 bucket used to store the Lambda builds."
-  type        = "string"
+  type        = string
 }
 
 variable "version_to_deploy" {
   description = "The version the Lambda function to deploy."
-  type        = "string"
+  type        = string
 }
 
 variable "ssm_slack_webhook_url" {
   description = "Name of the Slack webhook url parameter in Parameter Store."
-  type        = "string"
+  type        = string
 }
 
 variable "slack_channel" {
   description = "Slack channel to send alert to"
-  type        = "string"
+  type        = string
 }
+

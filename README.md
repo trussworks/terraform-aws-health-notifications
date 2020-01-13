@@ -1,4 +1,3 @@
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 Creates an AWS Lambda function to send Slack notification for AWS health events (e.g.,outages).
 using [truss-aws-tools](https://github.com/trussworks/truss-aws-tools).
 
@@ -23,6 +22,7 @@ module "health-notifications" {
 }
 ```
 
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
 | Name | Description | Type | Default | Required |
