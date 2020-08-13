@@ -23,15 +23,31 @@ module "health-notifications" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | ~> 0.12.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| cloudwatch\_logs\_retention\_days | Number of days to keep logs in AWS CloudWatch. | string | `"90"` | no |
-| environment | Environment tag, e.g prod. | string | n/a | yes |
-| s3\_bucket | The name of the S3 bucket used to store the Lambda builds. | string | n/a | yes |
-| slack\_channel | Slack channel to send alert to | string | n/a | yes |
-| ssm\_slack\_webhook\_url | Name of the Slack webhook url parameter in Parameter Store. | string | n/a | yes |
-| version\_to\_deploy | The version the Lambda function to deploy. | string | n/a | yes |
+|------|-------------|------|---------|:--------:|
+| cloudwatch\_logs\_retention\_days | Number of days to keep logs in AWS CloudWatch. | `string` | `90` | no |
+| environment | Environment tag, e.g prod. | `any` | n/a | yes |
+| s3\_bucket | The name of the S3 bucket used to store the Lambda builds. | `string` | n/a | yes |
+| slack\_channel | Slack channel to send alert to | `string` | n/a | yes |
+| ssm\_slack\_webhook\_url | Name of the Slack webhook url parameter in Parameter Store. | `string` | n/a | yes |
+| version\_to\_deploy | The version the Lambda function to deploy. | `string` | n/a | yes |
+
+## Outputs
+
+No output.
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
