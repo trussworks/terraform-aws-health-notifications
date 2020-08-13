@@ -1,29 +1,3 @@
-/**
- * Creates an AWS Lambda function to send Slack notification for AWS health events (e.g.,outages).
- * using [truss-aws-tools](https://github.com/trussworks/truss-aws-tools).
- *
- * Creates the following resources:
- *
- * * IAM role for Lambda function
- * * CloudWatch Event to trigger when AWS sends health events.
- * * AWS Lambda function to capture AWS health events and sends the notifcation to Slack.
- *
- * ## Usage
- *
- * ```hcl
- * module "health-notifications" {
- *   source  = "trussworks/health-notifications/aws"
- *   version = "1.0.0"
- *
- *   environment           = "prod"
- *   s3_bucket             = "lambda-builds-us-west-2"
- *   slack_channel         = "infra"
- *   ssm_slack_webhook_url = "slack-webhook-url"
- *   version_to_deploy     = "2.6"
- * }
- * ```
- */
-
 locals {
   pkg  = "truss-aws-tools"
   name = "aws-health-notifier"
