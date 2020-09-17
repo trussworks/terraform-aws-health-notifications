@@ -27,7 +27,7 @@ module "health-notifications" {
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.0 |
+| terraform | ~> 0.13.0 |
 
 ## Providers
 
