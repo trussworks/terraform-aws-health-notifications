@@ -1,12 +1,12 @@
 version: 2.1
 
 references:
-  circleci_test: &circleci_test trussworks/circleci:29ab89fdada1f85c5d8fb685a2c71660f0c5f60c
+  circleci: &circleci trussworks/circleci:29ab89fdada1f85c5d8fb685a2c71660f0c5f60c
 
 jobs:
   validate:
     docker:
-      - image: *circleci_test
+      - image: *circleci
     steps:
       - checkout
       - restore_cache:
