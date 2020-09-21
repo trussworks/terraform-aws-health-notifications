@@ -7,6 +7,13 @@ Creates the following resources:
 * CloudWatch Event to trigger when AWS sends health events.
 * AWS Lambda function to capture AWS health events and sends the notifcation to Slack.
 
+## Terraform Versions
+
+Terraform 0.12. Pin module version to `~> 3.0.0`. Submit pull-requests to `master` branch.
+
+Terraform 0.12. Pin module version to `~> 2.X`. Submit pull-requests to `terraform012` branch.
+
+
 ## Usage
 
 ```hcl
@@ -27,13 +34,14 @@ module "health-notifications" {
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 0.12.0 |
+| terraform | ~> 0.13.0 |
+| aws | ~> 3.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| aws | ~> 3.0 |
 
 ## Inputs
 
