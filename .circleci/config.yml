@@ -4,21 +4,21 @@ jobs:
     - auth:
         password: $DOCKER_PASSWORD
         username: $DOCKER_USERNAME
-      image: trussworks/circleci:29ab89fdada1f85c5d8fb685a2c71660f0c5f60c
+      image: trussworks/circleci:56d41758666174506ef9a98769e448c63acc2045
     steps:
     - checkout
     - restore_cache:
         keys:
         - pre-commit-dot-cache-{{ checksum ".pre-commit-config.yaml" }}
     - run:
-        command: pre-commit run --all-files
+        command: pre-commit run --all-files --show-diff-on-failure
         name: Run pre-commit tests
     - save_cache:
         key: pre-commit-dot-cache-{{ checksum ".pre-commit-config.yaml" }}
         paths:
         - ~/.cache/pre-commit
 references:
-  circleci: trussworks/circleci:29ab89fdada1f85c5d8fb685a2c71660f0c5f60c
+  circleci: trussworks/circleci:56d41758666174506ef9a98769e448c63acc2045
 version: 2.1
 workflows:
   validate:
