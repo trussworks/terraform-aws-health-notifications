@@ -1,4 +1,6 @@
-Creates an AWS Lambda function to send Slack notification for AWS health events (e.g.,outages).
+# DEPRECIATION NOTICE
+This module has been deprecated and is no longer maintained. Should you need to continue to use it, please fork the repository. Thank you.
+ Creates an AWS Lambda function to send Slack notification for AWS health events (e.g.,outages).
 using [truss-aws-tools](https://github.com/trussworks/truss-aws-tools).
 
 Creates the following resources:
